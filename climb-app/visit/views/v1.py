@@ -12,6 +12,7 @@ from climb.helpers.pagination import StandardResultsPagination
 class UserVisitViewSet(viewsets.ModelViewSet):
     queryset = Visitor.objects.order_by("-id")
     permission_classes = [AllowAny]
+    visit_manager = VisitManager()
 
     """
         POST v1/visit/
